@@ -29,7 +29,7 @@ namespace DIS_Final_Azure.Models
         public string Posts { get; set; }
     }
 
-    public class Federal_Agency_Stations
+    public class praneetFederal_Agency_Stations
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public ICollection<Fuel_Stations> ID { get; set; }
