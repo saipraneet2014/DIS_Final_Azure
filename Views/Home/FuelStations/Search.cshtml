@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Search";
+}
+
+<body>
+    <div id="wrapper">
+
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="pageTitle">Fuel Stations</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <br>
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>
+                        <label for="type">Fuel Type:</label>
+                        <select name="fuel" id="type">
+                            <option value="">BD</option>
+                            <option value="">CNG</option>
+                            <option value="">ELEC</option>
+                            <option value="">LPG</option>
+                            <option value="">E85</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="zip">Zip Code:</label>
+                        <input type="number">
+                    </div>
+                </div>
+                <div col="col-sm-6">
+                    <div>
+                        <label for="type">City:</label>
+                        <select name="city" id="type">
+                            <option value="">Montgomery</option>
+                            <option value="">Sun Valley	</option>
+                            <option value="">Tampa</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

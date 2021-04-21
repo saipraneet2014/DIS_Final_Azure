@@ -1,0 +1,72 @@
+﻿@model DIS_Final_Azure.Models.FuelStations
+
+<body>
+    <div id="wrapper">
+
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="pageTitle">Data Model</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+
+            <div class="container">
+                <h1>Data Source and Description</h1>
+                <!-- <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">Data Source and Description</div>
+                        <div class="collapsible-body"> -->
+                <p>
+                    We have used <b>National Renewable Energy Laboratory</b> application programming interface.
+                    All the api documents and usage guides are available <a href="https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/">here.</a>
+                </p>
+                <p>
+                    From the dataset, we can get the nearby fuel stations in the city along with the information about the station based on the type of fuel available.
+                    <!-- <p>
+                        The maps below shows the available fuel stations in every state in the United States and the count of fuel stations.
+                    </p> -->
+                    <!-- <p>
+                        Below are the api end-points we have used.
+                    </p>
+                    <b>GET/</b> https://developer.nps.gov/api/v1/parks <br>
+                    <b>GET/</b> https://developer.nps.gov/api/v1/topics <br>
+                    <b>GET/</b> https://developer.nps.gov/api/v1/topics/parks <br>
+                    <b>GET/</b> https://developer.nps.gov/api/v1/activities <br>
+                    <b>GET/</b> https://developer.nps.gov/api/v1/activities/parks <br> -->
+            </div>
+
+            <div class="container">
+                <h1>Data Model</h1>
+
+                <div class="container">
+                    <img id="modelimg" src="img/works/erd.jpeg" width="500" height="600">
+                </div>
+                <p>
+                    The data model contains one one-many relationship and one many-to-many relationship. One between the entity <b><i>Fuel_Stations</i></b>
+                    and <b><i>EV</i></b> and another between <b><i>Fuel_Stations</i></b> and <b><i>Federal_Agency</i></b>. This many-to-many realtionship is converted into a one-to-many relationship for easy schema understanding.
+                </p>
+
+
+
+            </div>
+
+            <div class="container">
+                <h1>Collaboration</h1>
+
+                <p>
+                <p> We have used github to collaborate across the team during various stages of bug-fixing and development</p>
+
+
+
+
+            </div>
+
+            </ul>
+    </div>
+    </section>
+    </div>
+</body>
