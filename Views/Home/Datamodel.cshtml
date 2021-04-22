@@ -1,5 +1,7 @@
-﻿@model DIS_Final_Azure.Models.FuelStations
-
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Datamodel";
+}
 <body>
     <div id="wrapper">
 
@@ -38,35 +40,36 @@
                     <b>GET/</b> https://developer.nps.gov/api/v1/activities <br>
                     <b>GET/</b> https://developer.nps.gov/api/v1/activities/parks <br> -->
             </div>
-            </section>
-            <div class="container">
-                <h1>Data Model</h1>
-
-                <div class="container">
-                    <img id="modelimg" src="img/works/erd.jpeg" width="500" height="600">
-                </div>
-                <p>
-                    The data model contains one one-many relationship and one many-to-many relationship. One between the entity <b><i>Fuel_Stations</i></b>
-                    and <b><i>EV</i></b> and another between <b><i>Fuel_Stations</i></b> and <b><i>Federal_Agency</i></b>. This many-to-many realtionship is converted into a one-to-many relationship for easy schema understanding.
-                </p>
-
-
-
-            </div>
+        </section>
+        <div class="container">
+            <h1>Data Model</h1>
 
             <div class="container">
-                <h1>Collaboration</h1>
-
-                <p>
-                <p> We used github to collaborate across the team during various stages of bug-fixing and development</p>
-
-
-
-
+                <img id="modelimg" src="img/works/erd.jpeg" width="500" height="600">
             </div>
+            <p>
+                The data model contains one one-many relationship and one many-to-many relationship. One between the entity <b><i>Fuel_Stations</i></b>
+                and <b><i>EV</i></b> and another between <b><i>Fuel_Stations</i></b> and <b><i>Federal_Agency</i></b>. This many-to-many realtionship is converted into a one-to-many relationship for easy schema understanding.
+            </p>
 
-            </ul>
+
+
+        </div>
+
+        <div class="container">
+            <h1>Collaboration</h1>
+
+            <p>
+            <p> We used github to collaborate across the team during various stages of bug-fixing and development</p>
+
+
+
+
+        </div>
+
+        </ul>
     </div>
     </section>
     </div>
 </body>
+

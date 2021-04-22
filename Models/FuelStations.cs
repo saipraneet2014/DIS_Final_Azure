@@ -27,6 +27,7 @@ namespace DIS_Final_Azure.Models
         public string ID { get; set; }
         public string Ports { get; set; }
         public string Posts { get; set; }
+        public Fuel_Stations station { get; set; }
     }
 
     public class Federal_Agency_Stations

@@ -13,12 +13,12 @@
     <meta name="description" content="" />
     <meta name="author" content="http://webthemez.com" />
     <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-    <link href="css/jcarousel.css" rel="stylesheet" />
-    <link href="css/flexslider.css" rel="stylesheet" />
-    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="~/css/jcarousel.css" rel="stylesheet" />
+    <link href="~/css/flexslider.css" rel="stylesheet" />
+    <link href="~/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -37,14 +37,16 @@
                 <h3>DSDSF</h3> -->
                 <!-- <h4 id="logo"><a href="index.html"><img src="img/logo.png" alt="logo" /> My website name</a></h4> -->
                 <div class="navbar-collapse collapse ">
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" /></a>
-
+                    <a class="navbar-brand" href="index.html"><img src="~/img/logo.png" alt="logo" /></a>
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="Search.html">Search</a></li>
-                        <li class="active"><a href="datamodel.html">datamodel</a></li>
-                        <li><a href="Stats.html">Stats</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li class="active"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-controller="Home" asp-action="Search">Search</a></li>
+                        <li><a asp-controller="Home" asp-action="Datamodel">datamodel</a></li>
+   
+                        <li><a asp-controller="Home" asp-action="Stats">Stats</a></li>
+                        <li><a asp-controller="Home" asp-action="AboutUs">About Us</a></li>
+
+                        <!-- <li><a href="contact.html">Contact</a></li> -->
                     </ul>
                 </div>
             </div>
