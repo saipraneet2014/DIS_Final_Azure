@@ -43,29 +43,7 @@ namespace DIS_Final_Azure.Models
         public int Federal_ID { get; set; }
         public string Federal_name { get; set; }
     }
-    /*public class Topic
-    {
-        public string ID { get; set; }
-        public string name { get; set; }
-        public ICollection<ParkTopic> parks { get; set; }
-    }
-
-    public class State
-    {
-        public string ID { get; set; }
-        public string name { get; set; }
-        public ICollection<StatePark> parks { get; set; }
-    }
-
-    public class StatePark
-    {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
-        public State state { get; set; }
-        public Park park { get; set; }
-    }
-*/
-    // This is a view model
+    
     public class CreateStation
     {
         public string ID { get; set; }
@@ -83,6 +61,9 @@ namespace DIS_Final_Azure.Models
         [Required]
         public ICollection<Federal_Agency> Federal_ID { get; set; }
     }
+
+
+    //DBcontext//
 }
 
 

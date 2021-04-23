@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using DIS_Final_Azure.DataAccess;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace DIS_Final_Azure
 {
@@ -23,7 +26,18 @@ namespace DIS_Final_Azure
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddControllersWithViews();
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DIS_Final_AzureContext")));
+            
+           // services.AddDatabaseDeveloperPageExceptionFilter();
+            services.AddRazorPages()
+                .AddMvcOptions(options =>
+                {
+                    options.MaxModelValidationErrors = 50;
+                    options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+                        _ => "The field is required.");
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,10 +50,7 @@ namespace DIS_Final_Azure
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
             }
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
