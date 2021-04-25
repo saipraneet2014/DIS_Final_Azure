@@ -1,59 +1,104 @@
-﻿@{
+﻿
+@{
     Layout = "_Layout";
     ViewData["Title"] = "Search";
 }
+@model IEnumerable<DIS_Final_Azure.Models.Fuel_Stations>
+    <body>
+        <div id="wrapper">
 
-<body>
-    <div id="wrapper">
+            <section id="inner-headline">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="pageTitle">Fuel Stations</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <section id="inner-headline">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="pageTitle">Fuel Stations</h2>
+                <form asp-action="Create" method="get">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <br>
+                            <button class="btn btn-primary">Create New</button>
+                        </div>
                     </div>
-                </div>
+                </form>
+                <form asp-action="Search" method="get">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <br>
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <label for="type">Fuel Type:</label>
+                                <select name="fuelType" id="type">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="BD">BD</option>
+                                    <option value="CNG">CNG</option>
+                                    <option value="ELEC">ELEC</option>
+                                    <option value="LPG">LPG</option>
+                                    <option value="E85">E85</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="zip">Zip Code:</label>
+                                <input name="zipcode" type="number">
+                            </div>
+                        </div>
+                        <div col="col-sm-6">
+                            <div>
+                                <label for="type">City:</label>
+                                <select name="city" id="type">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    @foreach (var item in Model)
+                                    {
+                                        <option value=@item.City>@item.City</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </section>
+            <div class="row">
+                <table class="table table-bordered" style="width:100%">
+                    <tbody>
+                        <tr>
+                            <th align="left">Station ID</th>
+                            <th align="left">Station Name</th>
+                            <th align="left">Fuel Type</th>
+                            <th align="left">Owner Type Code</th>
+                            <th align="left">Street Address</th>
+                            <th align="left">City</th>
+                            <th align="left">State</th>
+                            <th align="left">Zip</th>
+                            <th />
+                        </tr>
+                        @foreach (var item in ViewBag.result)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.Station_name</td>
+                                <td>@item.Fuel_type</td>
+                                <td>@item.Owner_type_code</td>
+                                <td>@item.Street_address</td>
+                                <td>@item.City</td>
+                                <td>@item.State</td>
+                                <td>@item.Zip</td>
+                                <td><a class="waves-effect waves-light btn" asp-action="Edit" asp-route-id="@item.ID">Update</a> <a asp-action="Delete" class="waves-effect waves-light btn" asp-route-id="@item.ID">Delete</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <br>
-                    <button class="btn btn-primary">Search</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div>
-                        <label for="type">Fuel Type:</label>
-                        <select name="fuel" id="type">
-                            <option value="">BD</option>
-                            <option value="">CNG</option>
-                            <option value="">ELEC</option>
-                            <option value="">LPG</option>
-                            <option value="">E85</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="zip">Zip Code:</label>
-                        <input type="number">
-                    </div>
-                </div>
-                <div col="col-sm-6">
-                    <div>
-                        <label for="type">City:</label>
-                        <select name="city" id="type">
-                            <option value="">Montgomery</option>
-                            <option value="">Sun Valley	</option>
-                            <option value="">Tampa</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
         </div>
 
-    </div>
-
-</body>
+    </body>
 

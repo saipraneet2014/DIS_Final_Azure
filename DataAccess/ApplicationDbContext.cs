@@ -13,10 +13,10 @@ namespace DIS_Final_Azure.DataAccess
         {
         }
         public DbSet<Fuel_Stations> Fuel_Stations { get; set; }
-        public DbSet<EV> EVs { get; set; }
-        public DbSet<Federal_Agency_Stations> Federal_Agency_Station { get; set; }
-        public DbSet<Federal_Agency> Federal_Agencies { get; set; }
-        public DbSet<CreateStation> CreateStations { get; set; }
+        public DbSet<EVs> EVs { get; set; }
+        //public DbSet<Federal_Agency_Stations> Federal_Agency_Station { get; set; }
+        //public DbSet<Federal_Agency> Federal_Agencies { get; set; }
+        //public DbSet<CreateStation> CreateStations { get; set; }
      
 
     }

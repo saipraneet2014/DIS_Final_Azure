@@ -1,0 +1,58 @@
+﻿@model DIS_Final_Azure.Models.Fuel_Stations
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <div class="row center-align">
+                <form method="post" asp-controller="Home" asp-action="CreateNew">
+                    <div class="input-field col s12">
+                        <input asp-for="ID" type="text" class="validate">
+                        <label asp-for="ID">Enter a unique Fuel Station ID</label>
+                        <span asp-validation-for="ID" class="red-text"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <input asp-for="Station_name" type="text" class="validate">
+                        <label asp-for="Station_name">Name of the Fuel Station</label>
+                        <span asp-validation-for="Station_name" class="red-text"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <input asp-for="Fuel_type" type="text" class="validate">
+                        <label asp-for="Fuel_type">Fuel Type</label>
+                        <span asp-validation-for="Fuel_type" class="red-text"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <input asp-for="Owner_type_code" type="text" class="validate">
+                        <label asp-for="Owner_type_code">Owner Type Code</label>
+                        <span asp-validation-for="Owner_type_code" class="red-text"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <input asp-for="Street_address" type="text" class="validate">
+                        <label asp-for="Street_address">Street Address</label>
+                        <span asp-validation-for="Street_address" class="red-text"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <input asp-for="City" type="text" class="validate">
+                        <label asp-for="City">City</label>
+                        <span asp-validation-for="City" class="red-text"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <input asp-for="State" type="text" class="validate">
+                        <label asp-for="State">State</label>
+                        <span asp-validation-for="State" class="red-text"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <input asp-for="Zip" type="text" class="validate">
+                        <label asp-for="Zip">Zip</label>
+                        <span asp-validation-for="Zip" class="red-text"></span>
+                    </div>
+                    <div class="input-field col s12">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Confirm Creation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

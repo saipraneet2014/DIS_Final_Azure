@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Dictionary<string, int> 
+@{
     Layout = "_Layout";
     ViewData["Title"] = "Stats";
 }
@@ -9,7 +10,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="pageTitle">Stats</h2>
+                        <h2 class="pageTitle">EV Stats - Representation of number of EV Stations in each state</h2>
                     </div>
                 </div>
             </div>
@@ -75,203 +76,203 @@
             polygonSeries.data = [
                 {
                     id: "US-AL",
-                    value: 4447100
+                    value: @(Model.ContainsKey("AL") ? Model["AL"] : 0)
                 },
                 {
                     id: "US-AK",
-                    value: 626932
+                    value: @(Model.ContainsKey("AK") ? Model["AK"] : 0)
                 },
                 {
                     id: "US-AZ",
-                    value: 5130632
+                    value: @(Model.ContainsKey("AZ") ? Model["AZ"] : 0)
                 },
                 {
                     id: "US-AR",
-                    value: 2673400
+                    value: @(Model.ContainsKey("AR") ? Model["AR"] : 0)
                 },
                 {
                     id: "US-CA",
-                    value: 33871648
+                    value: @(Model.ContainsKey("CA") ? Model["CA"] : 0)
                 },
                 {
                     id: "US-CO",
-                    value: 4301261
+                    value: @(Model.ContainsKey("CO") ? Model["CO"] : 0)
                 },
                 {
                     id: "US-CT",
-                    value: 3405565
+                    value: @(Model.ContainsKey("CT") ? Model["CT"] : 0)
                 },
                 {
                     id: "US-DE",
-                    value: 783600
+                    value: @(Model.ContainsKey("DE") ? Model["DE"] : 0)
                 },
                 {
                     id: "US-FL",
-                    value: 15982378
+                    value: @(Model.ContainsKey("FL") ? Model["FL"] : 0)
                 },
                 {
                     id: "US-GA",
-                    value: 8186453
+                    value: @(Model.ContainsKey("GA") ? Model["GA"] : 0)
                 },
                 {
                     id: "US-HI",
-                    value: 1211537
+                    value: @(Model.ContainsKey("HI") ? Model["HI"] : 0)
                 },
                 {
                     id: "US-ID",
-                    value: 1293953
+                    value: @(Model.ContainsKey("ID") ? Model["ID"] : 0)
                 },
                 {
                     id: "US-IL",
-                    value: 12419293
+                    value: @(Model.ContainsKey("IL") ? Model["IL"] : 0)
                 },
                 {
                     id: "US-IN",
-                    value: 6080485
+                    value: @(Model.ContainsKey("IN") ? Model["IN"] : 0)
                 },
                 {
                     id: "US-IA",
-                    value: 2926324
+                    value: @(Model.ContainsKey("IA") ? Model["IA"] : 0)
                 },
                 {
                     id: "US-KS",
-                    value: 2688418
+                    value: @(Model.ContainsKey("KS") ? Model["KS"] : 0)
                 },
                 {
                     id: "US-KY",
-                    value: 4041769
+                    value: @(Model.ContainsKey("KY") ? Model["KY"] : 0)
                 },
                 {
                     id: "US-LA",
-                    value: 4468976
+                    value: @(Model.ContainsKey("LA") ? Model["LA"] : 0)
                 },
                 {
                     id: "US-ME",
-                    value: 1274923
+                    value: @(Model.ContainsKey("ME") ? Model["ME"] : 0)
                 },
                 {
                     id: "US-MD",
-                    value: 5296486
+                    value: @(Model.ContainsKey("MD") ? Model["MD"] : 0)
                 },
                 {
                     id: "US-MA",
-                    value: 6349097
+                    value: @(Model.ContainsKey("MA") ? Model["MA"] : 0)
                 },
                 {
                     id: "US-MI",
-                    value: 9938444
+                    value: @(Model.ContainsKey("MI") ? Model["MI"] : 0)
                 },
                 {
                     id: "US-MN",
-                    value: 4919479
+                    value: @(Model.ContainsKey("MN") ? Model["MN"] : 0)
                 },
                 {
                     id: "US-MS",
-                    value: 2844658
+                    value: @(Model.ContainsKey("MS") ? Model["MS"] : 0)
                 },
                 {
                     id: "US-MO",
-                    value: 5595211
+                    value: @(Model.ContainsKey("MO") ? Model["MO"] : 0)
                 },
                 {
                     id: "US-MT",
-                    value: 902195
+                    value: @(Model.ContainsKey("MT") ? Model["MT"] : 0)
                 },
                 {
                     id: "US-NE",
-                    value: 1711263
+                    value: @(Model.ContainsKey("NE") ? Model["NE"] : 0)
                 },
                 {
                     id: "US-NV",
-                    value: 1998257
+                    value: @(Model.ContainsKey("NV") ? Model["NV"] : 0)
                 },
                 {
                     id: "US-NH",
-                    value: 1235786
+                    value: @(Model.ContainsKey("NH") ? Model["NH"] : 0)
                 },
                 {
                     id: "US-NJ",
-                    value: 8414350
+                    value: @(Model.ContainsKey("NJ") ? Model["NJ"] : 0)
                 },
                 {
                     id: "US-NM",
-                    value: 1819046
+                    value: @(Model.ContainsKey("NM") ? Model["NM"] : 0)
                 },
                 {
                     id: "US-NY",
-                    value: 18976457
+                    value: @(Model.ContainsKey("NY") ? Model["NY"] : 0)
                 },
                 {
                     id: "US-NC",
-                    value: 8049313
+                    value: @(Model.ContainsKey("NC") ? Model["NC"] : 0)
                 },
                 {
                     id: "US-ND",
-                    value: 642200
+                    value: @(Model.ContainsKey("ND") ? Model["ND"] : 0)
                 },
                 {
                     id: "US-OH",
-                    value: 11353140
+                    value: @(Model.ContainsKey("OH") ? Model["OH"] : 0)
                 },
                 {
                     id: "US-OK",
-                    value: 3450654
+                    value: @(Model.ContainsKey("OK") ? Model["OK"] : 0)
                 },
                 {
                     id: "US-OR",
-                    value: 3421399
+                    value: @(Model.ContainsKey("OR") ? Model["OR"] : 0)
                 },
                 {
                     id: "US-PA",
-                    value: 12281054
+                    value: @(Model.ContainsKey("PA") ? Model["PA"] : 0)
                 },
                 {
                     id: "US-RI",
-                    value: 1048319
+                    value: @(Model.ContainsKey("RI") ? Model["RI"] : 0)
                 },
                 {
                     id: "US-SC",
-                    value: 4012012
+                    value: @(Model.ContainsKey("SC") ? Model["SC"] : 0)
                 },
                 {
                     id: "US-SD",
-                    value: 754844
+                    value: @(Model.ContainsKey("SD") ? Model["SD"] : 0)
                 },
                 {
                     id: "US-TN",
-                    value: 5689283
+                    value: @(Model.ContainsKey("TN") ? Model["TN"] : 0)
                 },
                 {
                     id: "US-TX",
-                    value: 20851820
+                    value: @(Model.ContainsKey("TX") ? Model["TX"] : 0)
                 },
                 {
                     id: "US-UT",
-                    value: 2233169
+                    value: @(Model.ContainsKey("UT") ? Model["UT"] : 0)
                 },
                 {
                     id: "US-VT",
-                    value: 608827
+                    value: @(Model.ContainsKey("VT") ? Model["VT"] : 0)
                 },
                 {
                     id: "US-VA",
-                    value: 7078515
+                    value: @(Model.ContainsKey("VA") ? Model["VA"] : 0)
                 },
                 {
                     id: "US-WA",
-                    value: 5894121
+                    value: @(Model.ContainsKey("WA") ? Model["WA"] : 0)
                 },
                 {
                     id: "US-WV",
-                    value: 1808344
+                    value: @(Model.ContainsKey("WV") ? Model["WV"] : 0)
                 },
                 {
                     id: "US-WI",
-                    value: 5363675
+                    value: @(Model.ContainsKey("WI") ? Model["WI"] : 0)
                 },
                 {
                     id: "US-WY",
-                    value: 493782
+                    value: @(Model.ContainsKey("WY") ? Model["WY"] : 0)
                 }
             ];
 

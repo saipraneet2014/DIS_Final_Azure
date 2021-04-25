@@ -9,6 +9,7 @@ namespace DIS_Final_Azure.Models
 {
     public class Fuel_Stations
     {
+        [Key]
         public string ID { get; set; }
         public string Station_name { get; set; }
         public string Fuel_type { get; set; }
@@ -17,35 +18,37 @@ namespace DIS_Final_Azure.Models
         public string City { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
-        public ICollection<EV> Station_EV_ID { get; set; }
+        public ICollection<EVs> Station_EV_ID { get; set; }
         public ICollection<Federal_Agency> Federal_ID { get; set; }
     }
 
-    public class EV
+    public class EVs
     {
-        public string Station_EV_ID { get; set; }
+        [Key]
+        public int Station_EV_ID { get; set; }
         public string ID { get; set; }
         public string Ports { get; set; }
         public string Posts { get; set; }
         public Fuel_Stations station { get; set; }
     }
 
-    public class Federal_Agency_Stations
+    /*public class Federal_Agency_Stations
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public ICollection<Fuel_Stations> ID { get; set; }
+        public ICollection<Fuel_Stations> FuelStations { get; set; }
         public ICollection<Federal_Agency> Federal_ID { get; set; }
-    }
+    }*/
 
     public class Federal_Agency
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Federal_ID { get; set; }
+        public int ID { get; set; }
         public string Federal_name { get; set; }
     }
     
-    public class CreateStation
+    /*public class CreateStation
     {
+        [Key]
         public string ID { get; set; }
         [Required]
         [Url]
@@ -60,7 +63,7 @@ namespace DIS_Final_Azure.Models
         public ICollection<EV> Station_EV_ID { get; set; }
         [Required]
         public ICollection<Federal_Agency> Federal_ID { get; set; }
-    }
+    }*/
 
 
     //DBcontext//

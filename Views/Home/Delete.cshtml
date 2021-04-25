@@ -1,0 +1,53 @@
+﻿@model DIS_Final_Azure.Models.Fuel_Stations
+
+<div class="container">
+    <div class="row">
+        
+        <form method="post" asp-controller="Home" asp-action="DeleteConfirmed">
+            <input type="hidden" asp-for="ID" />
+            <div class="input-field col s12 center-align">
+                <button class="btn waves-effect waves-green red" type="submit" name="action"><b>Confirm</b></button>
+            </div>
+        </form>
+
+
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col s2"><b>Fuel Station ID</b></div>
+                        <div class="col s10">@Html.DisplayFor(model => model.ID)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2"><b>Station Name</b></div>
+                        <div class="col s10">@Html.DisplayFor(model => model.Station_name)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2"><b>Fuel Type</b></div>
+                        <div class="col s10">@Html.DisplayFor(model => model.Fuel_type)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2"><b>Owner Type Code</b></div>
+                        <div class="col s10">@Html.DisplayFor(model => model.Owner_type_code)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2"><b>Street Address</b></div>
+                        <div class="col s10">@Html.DisplayFor(model => model.Street_address)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2"><b>City</b></div>
+                        <div class="col s10"><blockquote>@Html.DisplayFor(model => model.City)</blockquote></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2"><b>State</b></div>
+                        <div class="col s10"><blockquote>@Html.DisplayFor(model => model.State)</blockquote></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2"><b>Zip</b></div>
+                        <div class="col s10"><blockquote>@Html.DisplayFor(model => model.Zip)</blockquote></div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</div>
